@@ -1,0 +1,49 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Arvo&family=Roboto&display=swap');
+  </style> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Nikola Micic</title>
+</head>
+<body class="bg-black">
+    <header>{% include 'navbar.html' %}</header>
+
+    {% block content %}
+    <!-- MAIN WRAPPER -->
+    <div class="flex flex-col lg:grid lg:grid-rows-2 lg:grid-cols-3 mx-4 md:mx-32 lg:mx-64 my-10 gap-10 bg-black">
+
+      <!-- ABOUT ME -->
+      <div class="row-span-1 col-span-1"><img class="rounded-lg border-2 border-amber-300" src="{% static 'images/nikola.jpg'%}"></div>
+      <div style="font-family: Roboto" class="row-span-1 col-span-1 lg:col-span-2 p-6 bg-amber-300 rounded-lg border-2 border-black">
+          <h5 class="mb-2 text-2xl font-bold text- tracking-tight text-black">About me</h5>
+          <p class="mb-3 font-normal text-black">Hi there! My name is Nikola and I am a junior developer specializing in Python. I have always been fascinated by the world of coding and software development, and I am excited to be pursuing this career path.</p>
+          <p class="mb-3 font-normal text-black">In my studies, I have gained a solid foundation in Python programming, including its syntax, data structures, and algorithms. I am also comfortable working with various libraries and frameworks commonly used in Python development, such as Django and NumPy. When it comes to Frontend, I have experience working with HTML5 and CSS and it's framework TailwindCSS.</p>
+          <p class="mb-3 font-normal text-black">While I am still early in my career, I am eager to continue learning and growing as a developer. I am committed to writing clean, efficient code that solves real-world problems and delivers value to users. I believe in the power of collaboration and enjoy working with others to brainstorm new ideas and find creative solutions.</p>
+          <p class="mb-3 font-normal text-black">Outside of coding, I enjoy exploring new technologies and keeping up with the latest trends in the tech industry. I am also an avid reader and enjoy discovering new books on a variety of topics.</p>
+          <p class="mb-3 font-normal text-black">I am excited to be a part of the Python developer community and look forward to contributing to its growth and innovation in the years to come.</p>
+          <a href="/projects" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-black rounded-lg hover:text-amber-300 focus:ring-4 focus:outline-none focus:ring-white">
+            Check out my projects
+            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </a>
+        </div>
+
+      
+      <div style="font-family: Roboto" class="row-span-1 col-span-1 lg:col-span-3 p-6 bg-black border-2 border-yellow-400 rounded-lg ">
+        <a href="#"><h5 class="mb-2 text-2xl font-bold text- tracking-tight text-amber-300">Lorem ipsum dolor sit amet.</h5></a>
+        <p class="mb-3 font-normal text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat ullamcorper dui eget sodales. Aenean sit amet dui neque. In id congue tellus. Maecenas interdum libero quis dictum dignissim. Aliquam quis sem tortor. Nulla pellentesque sodales arcu, iaculis suscipit tellus facilisis vitae. Vestibulum cursus felis eu turpis placerat, nec sollicitudin justo molestie. Aliquam risus augue, sodales id erat ut, bibendum feugiat ante.</p>
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black bg-amber-300 rounded-lg hover:text-white focus:ring-4 focus:outline-none focus:ring-white">
+            Read more
+            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </a>
+      </div>
+  
+    </div>
+    {% endblock content %}
+  <footer>{% include 'footer.html' %}</footer>
+</body>
+</html>

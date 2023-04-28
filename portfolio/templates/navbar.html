@@ -1,0 +1,18 @@
+{% load static %}
+
+<div class="flex lg:flex-row md:flex-row flex-col py-2 lg:py-4 md:py-4 border-b-2 border-amber-300 justify-center md:justify-between lg:mx-64 md:mx-32 mx-4">
+    <!-- ADD A LOGO OR A PICTURE INSTEAD OF NM -->
+    <a class="hidden lg:flex" href="/"><img class="h-[48px] w-[48px] md:h-[64px] md:w-[64px] lg:h-[80px] lg:w-[80px]" src="{% static '/images/testing.png'%}"></a>
+    <div class="lg:hidden justify-center text-center"><h1 style="font-family: Roboto" class="text-2xl font-extrabold text-amber-300">NM</h1></div>
+    
+    <div class="justify-center text-center">
+        <ul style="font-family: Roboto" class="lg:mt-6 flex flex-row justify-center gap-8 text-lg lg:text-xl md:text-xl text-amber-300 pl-10 md:pl-0">
+            <li><a class="hover:font-bold hover:text-yellow-400" href="/">About</a></li>
+            <li><a class="hover:font-bold hover:text-yellow-400" href="/projects">Projects</a></li>
+            <li><a class="hover:font-bold hover:text-yellow-400" href="/contact">Contact</a></li>
+            <li><a class="hidden lg:block hover:font-bold hover:text-yellow-400" href="/download-cv">Download CV</a></li>
+            <li class="hidden md:block lg:hidden"><a class="block bg-amber-300 py-1 rounded-sm hover:font-semibold hover:bg-amber-400 text-black" href="/download-cv">Download CV</a></li>
+        </ul>
+    </div>
+    <a class="hidden lg:flex" href="/"><img class="h-[48px] w-[48px] md:h-[64px] md:w-[64px] lg:h-[80px] lg:w-[80px]" src="{% static '/images/testing.png'%}"></a>
+</div>

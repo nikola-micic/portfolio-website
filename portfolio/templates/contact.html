@@ -1,0 +1,71 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div style="font-family: Roboto;" class="mx-4 md:mx-32 lg:mx-64 my-4 text-amber-300">
+    <h1 class="font-bold text-5xl pb-6">Contact</h1>
+    <form class="w-full" method="post">
+        {% csrf_token %}
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-amber-300 text-xs font-bold mb-2" for="grid-first-name">
+              First Name
+            </label>
+            {{form.first_name}}
+          </div>
+          <div class="w-full md:w-1/4 px-3">
+            <label class="block uppercase tracking-wide text-amber-300 text-xs font-bold mb-2" for="grid-last-name">
+              Last Name
+            </label>
+            {{form.last_name}}
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full md:w-1/4 px-3">
+            <label class="block uppercase tracking-wide text-amber-300 text-xs font-bold mb-2" for="grid-password">
+              Email
+            </label>
+            {{form.email_address}}
+          </div>
+          <div class="w-full md:w-1/4 px-3">
+            <label class="block uppercase tracking-wide text-amber-300 text-xs font-bold mb-2" for="grid-password">
+              Phone
+            </label>
+            {{form.phone_number}}
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-2">
+          <div class="w-full md:w-1/2 px-3 mb-6">
+            <label class="block uppercase tracking-wide text-amber-300 text-xs font-bold mb-2" for="grid-state">
+              Country
+            </label>
+            {{form.country}}
+           </div>
+        </div>
+        <div class="flex flex-col flex-wrap -mx-3 mb-2">
+            <div class="w-full md:w-1/2 px-3 mb-6">
+                <label class="block uppercase tracking-wide text-amber-300 text-xs font-bold mb-2" for="grid-zip">
+                    Title
+                </label>
+                {{form.title}}
+            </div>
+            <div class="w-full md:w-1/2 px-3 mb-2">
+                <label class="block uppercase tracking-wide text-amber-300 text-xs font-bold mb-2" for="grid-zip">
+                    Message
+                </label>
+                {{form.message}}
+            </div>
+        </div>
+        <div class="flex flex-row w-full md:w-1/2 mb-2 justify-start">
+          <label class="block uppercase tracking-wide text-amber-300 text-xs font-bold" for="grid-zip">I accept User Terms/Agreements</label>
+          <div class="pl-4">{{form.user_agreement}}</div>
+        </div>
+        <input style="font-family: Roboto;" type="submit" value="Submit" class="mb-2 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black bg-amber-300 rounded-lg hover:text-white focus:ring-4 focus:outline-none focus:ring-white">
+        {% if form.errors %}
+        <div class="alert alert-danger">
+          {{ form.errors }}
+        </div>
+        {% endif %}
+      </form>
+      
+</div>
+{% endblock content %}
